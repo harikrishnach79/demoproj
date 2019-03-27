@@ -13,7 +13,25 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
+<reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.7</version>
+        <configuration>
+          <rulesets>
+            <!-- A rule set, that comes bundled with PMD -->
+            <!-- <ruleset>/category/java/bestpractices.xml</ruleset> -->
+            <!-- Custom local file system rule set -->
+            <ruleset>d:\rulesets\strings.xml</ruleset>
+            <!-- Custom remote rule set accessed via a URL -->
+            <!-- <ruleset>http://localhost/design.xml</ruleset> -->
+          </rulesets>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
